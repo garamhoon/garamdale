@@ -27,8 +27,7 @@ export default function RootLayout({children}: Readonly<{
       </div>
     </main>
     <footer className="bg-opacity-90 py-4 text-center mt-16 border-t border-gray-200">
-      <p>&copy; {new Date().getFullYear()} garamdale. All rights reserved.</p>
-      <div className="text-center mt-4">
+      <div className="text-center mb-4">
         <h3 className="text-xl font-semibold mb-4">Follow Me</h3>
         <div className="flex justify-center space-x-4">
           <Link href="https://www.threads.net/@garamhoon" target="_blank" rel="noopener noreferrer">
@@ -39,6 +38,7 @@ export default function RootLayout({children}: Readonly<{
           </Link>
         </div>
       </div>
+      <p>&copy; {new Date().getFullYear()} garamdale. All rights reserved.</p>
     </footer>
     </body>
     </html>
