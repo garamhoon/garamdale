@@ -1,7 +1,7 @@
 import React from 'react';
-import Image from "next/image";
-import {FaGithub} from "react-icons/fa";
-import ButtonLink from "@/components/ButtonLink";
+import Image from 'next/image';
+import { FaGithub } from 'react-icons/fa';
+import ButtonLink from '@/components/ButtonLink';
 
 interface Project {
   id: number;
@@ -11,7 +11,7 @@ interface Project {
   githubUrl: string;
 }
 
-const projects: Project[] = Array.from({length: 4}, (_, i) => ({
+const projects: Project[] = Array.from({ length: 4 }, (_, i) => ({
   id: i,
   title: `Project ${i + 1}`,
   description: 'Coming soon',
@@ -27,28 +27,25 @@ const ProjectsSection: React.FC = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project) => (
             <div key={project.id} className="bg-white/30 rounded-lg shadow-md overflow-hidden">
-              <Image src={project.imageUrl} alt={project.title} width={300} height={300}
-                     className="w-full h-48 object-cover"/>
+              <Image
+                src={project.imageUrl}
+                alt={project.title}
+                width={300}
+                height={300}
+                className="w-full h-48 object-cover"
+              />
               <div className="p-6">
                 <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
                 <p className="text-gray-700 mb-4">{project.description}</p>
                 <div className="flex justify-between items-center">
                   <div></div>
-                  <ButtonLink
-                    href={project.githubUrl}
-                    target="_blank"
-                  >
-                    <FaGithub/>
+                  <ButtonLink href={project.githubUrl} target="_blank">
+                    <FaGithub />
                   </ButtonLink>
                 </div>
               </div>
             </div>
           ))}
-        </div>
-        <div className="text-center mt-10">
-          <ButtonLink href="/projects">
-            View All Projects
-          </ButtonLink>
         </div>
       </div>
     </section>
