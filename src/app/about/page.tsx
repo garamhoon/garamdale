@@ -20,7 +20,7 @@ const AboutPage: React.FC = () => {
         <h2 className="text-4xl font-bold mb-4">About Me</h2>
         <AboutMeParagraph className="mb-4">안녕하세요! 저는 웹 개발자 정명훈입니다.</AboutMeParagraph>
         <AboutMeParagraph>저는 2019년에 웹 개발을 시작하여 현재까지 개발자로서 일하고 있습니다.</AboutMeParagraph>
-        <AboutMeParagraph>지금까지는 C#과 jQuery을 사용해왔습니다.</AboutMeParagraph>
+        <AboutMeParagraph>지금까지는 C#과 jQuery를 사용해왔습니다.</AboutMeParagraph>
         <AboutMeParagraph>앞으로는 조금 다른 여정을 시작할 예정입니다. 저의 새로운 여정 지켜봐주세요.</AboutMeParagraph>
       </div>
 
