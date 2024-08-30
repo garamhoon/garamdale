@@ -11,13 +11,25 @@ interface Project {
   githubUrl: string;
 }
 
-const projects: Project[] = Array.from({ length: 4 }, (_, i) => ({
-  id: i,
-  title: `Project ${i + 1}`,
-  description: 'Coming soon',
-  imageUrl: '/bg_marble.jpg',
-  githubUrl: 'https://github.com/garamhoon',
-}));
+const projects: Project[] = Array.from({ length: 4 }, (_, i) => {
+  if (i === 0) {
+    return {
+      id: i,
+      title: 'Socioptic',
+      description: 'Socioptic은 소셜 미디어 관리 및 분석 플랫폼입니다.',
+      imageUrl: '/bg_marble.jpg',
+      githubUrl: 'https://github.com/garamhoon/socioptic',
+    };
+  } else {
+    return {
+      id: i,
+      title: `Project ${i + 1}`,
+      description: 'Coming soon',
+      imageUrl: '/bg_marble.jpg',
+      githubUrl: 'https://github.com/garamhoon',
+    };
+  }
+});
 
 const ProjectsSection: React.FC = () => {
   return (
