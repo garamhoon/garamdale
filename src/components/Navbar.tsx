@@ -19,8 +19,6 @@ const Navbar: React.FC = () => {
               <span className="font-bold sm:inline-block">garamdale</span>
             </Link>
             <nav className="flex items-center space-x-6 text-sm font-medium">
-              <Link href="/about">About</Link>
-              <Link href="/projects">Projects</Link>
               <Link href="/contact">Contact</Link>
             </nav>
           </div>
