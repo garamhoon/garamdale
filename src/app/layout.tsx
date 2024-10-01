@@ -2,9 +2,8 @@ import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import '@/styles/globals.css';
 import Navbar from '@/components/Navbar';
-import Link from 'next/link';
-import { FaThreads, FaGithub, FaXTwitter } from 'react-icons/fa6';
 import React from 'react';
+import { ThemeProvider } from 'next-themes';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -21,27 +20,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.className} bg-background text-primary`}>
-        <Navbar />
-        <main className="relative container mx-auto px-4 pt-16">
-          <div className="relative z-10">{children}</div>
-        </main>
-        <footer className="bg-opacity-90 py-4 text-center mt-16 border-t border-gray-200">
-          <div className="text-center mb-4">
-            <h3 className="text-xl font-semibold mb-4">Follow Me</h3>
-            <div className="flex justify-center space-x-4">
-              <Link href="https://www.threads.net/@garamhoon" target="_blank" rel="noopener noreferrer">
-                <FaThreads />
-              </Link>
-              <Link href="https://x.com/garamhoon" target="_blank" rel="noopener noreferrer">
-                <FaXTwitter />
-              </Link>
-              <Link href="https://github.com/garamhoon" target="_blank" rel="noopener noreferrer">
-                <FaGithub />
-              </Link>
-            </div>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <Navbar />
+          <div className="min-h-screen bg-background text-foreground">
+            <main className="container mx-auto px-4 py-8">{children}</main>
           </div>
-          <p>&copy; {new Date().getFullYear()} garamdale. All rights reserved.</p>
-        </footer>
+          <footer className="mt-16 border-t py-6 text-center text-sm">
+            <p>&copy; {new Date().getFullYear()} garamdale. All rights reserved.</p>
+          </footer>
+        </ThemeProvider>
       </body>
     </html>
   );
