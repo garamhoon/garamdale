@@ -10,7 +10,7 @@ export const projects = [
     id: 2,
     title: '뽀모도로 타이머 (크롬 익스텐션)',
     description: '뽀모도로 타이머 + 웹사이트 차단 기능. 집중력 및 생산성 도구.',
-    image: null,
     project_date: new Date('2024-10-01'),
+    image: '/timer.jpg',
   },
 ];
